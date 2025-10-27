@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Redhawk";
+  src: url("../src/assets/fonts/redhawk.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("../src/assets/fonts/NeueMontreal-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("../src/assets/fonts/NeueMontreal-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("../src/assets/fonts/NeueMontreal-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("../src/assets/fonts/NeueMontreal-Bold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* colors */
+  --color-darkBg: #030001;
+  --color-darkerOrange: #fa4f19;
+  --color-darkOrange: #ff9000;
+  --color-textColor: #321c1f;
+
+  /* breakpoints */
+  --breakpoint-xs: 350px;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 976px;
+  --breakpoint-llg: 1200px;
+  --breakpoint-xlg: 1360px;
+  --breakpoint-xl: 1440px;
+  --breakpoint-mxl: 1500px;
+  --breakpoint-xxl: 1800px;
+
+  /* fonts */
+  --font-neue: NeueMontreal, system-ui, sans-serif;
+  --font-redhawk: Redhawk, system-ui, sans-serif;
+  --font-mont: "Montserrat", sans-serif;
+}
+
+img {
+  -webkit-user-drag: none; /* Safari / old Chrome */
+  user-drag: none; /* future spec */
+  -webkit-user-select: none; /* prevents text-selection drag */
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.brand-gradient {
+  background: linear-gradient(
+      359.04deg,
+      rgba(250, 79, 25, 0.6) 0.41%,
+      rgba(255, 144, 0, 0.6) 34.04%
+    ),
+    linear-gradient(87.03deg, #fa4f19 -2.25%, #ff9000 83.68%),
+    linear-gradient(0deg, #ffffff, #ffffff);
+}
+
+.shadow-b {
+  box-shadow: 0px 1px 2px 0px rgb(0 0 0 / 0.08);
+}
+
+.rotate-text {
+  writing-mode: vertical-lr;
+}
+
+.card-shadow {
+  box-shadow: 0px 30.07px 131.56px 0px #20248a0f;
+}
+
+/* activate dark:* utilities when <html class="dark"> exists */
+@custom-variant dark (&:where(.dark, .dark *));
