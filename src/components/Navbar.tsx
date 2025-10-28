@@ -85,13 +85,15 @@ const Navbar = () => {
 
         {/* button and ThemeToggle (Desktop) */}
         <div className="hidden lg:flex items-center gap-6">
-          <ThemeToggle /> {/* <-- Placed ThemeToggle here for desktop */}
+          <div>
+            <ThemeToggle />
+          </div>
           <Button name="Start Protecting" />
         </div>
 
         {/* ThemeToggle and hamburger menu (Mobile) */}
         <div className="flex items-center gap-4 lg:hidden">
-          <ThemeToggle /> {/* <-- Placed ThemeToggle here for mobile */}
+          <ThemeToggle />
           <motion.button
             onClick={toggleMenu}
             className="text-black dark:text-white focus:outline-none cursor-pointer"
@@ -112,7 +114,7 @@ const Navbar = () => {
             animate="open"
             exit="closed"
           >
-            <div className="bg-[#E53E3E0F] dark:bg-[#FFFFFF17]/10 backdrop-blur-[4px] lg:hidden mt-2 p-4">
+            <div className="bg-[#E53E3E0F] dark:bg-[#FFFFFF17]/30 backdrop-blur-[4px] lg:hidden mt-2 p-4 h-screen">
               <div className="flex flex-col text-center items-center justify-center space-y-4">
                 {links.map((item, index) => (
                   <motion.div
