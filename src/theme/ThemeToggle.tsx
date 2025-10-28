@@ -3,7 +3,11 @@ import { useTheme } from "./useTheme";
 
 export const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
-  const isDark = theme === "dark";
+  const isDark =
+    theme === "dark" ||
+    (theme === "system" &&
+      typeof window !== "undefined" &&
+      matchMedia("(prefers-color-scheme: dark)").matches);
 
   const toggleTheme = () => {
     setTheme(isDark ? "light" : "dark");
